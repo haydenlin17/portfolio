@@ -1,0 +1,159 @@
+:root {
+  --paper: #fbfaf7;
+  --ink: #1c1b19;
+  --ink-soft: #4a4741;
+  --ink-muted: #77726a;
+  --rule: #e2ded4;
+  --accent: #1f3a5f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0a0a0a;
+    --ink: #ededed;
+    --ink-soft: #c3c3c3;
+    --ink-muted: #8b8b8b;
+    --rule: #262626;
+    --accent: #a9c4e8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.hero,
+main,
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 7vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 12px 0 0;
+}
+
+.statement {
+  margin: 20px 0 0;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 54ch;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.links a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 32px;
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px 20px;
+}
+
+.skills-grid li {
+  padding-left: 16px;
+  position: relative;
+  color: var(--ink-soft);
+}
+
+.skills-grid li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink-muted);
+}
+
+.project {
+  border-top: 1px solid var(--rule);
+  padding: 20px 0;
+}
+
+.project:last-child {
+  padding-bottom: 0;
+}
+
+.project h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.project p {
+  margin: 0 0 10px;
+  color: var(--ink-soft);
+}
+
+.project a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  padding-bottom: 48px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-muted);
+  font-size: 13px;
+}
